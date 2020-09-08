@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
 /**
@@ -13,11 +14,15 @@ import androidx.navigation.fragment.findNavController
  */
 class FirstFragment : Fragment() {
 
+    lateinit var viewModel: TaskViewModel
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        viewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
+
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
