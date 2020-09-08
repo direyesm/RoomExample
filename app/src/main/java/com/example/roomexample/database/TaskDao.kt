@@ -28,4 +28,7 @@ interface TaskDao {
     //Busca un elemento por ID
     @Query("SELECT * FROM TABLE_TASK WHERE id =:mId")
     fun getOneTaskByID(mId: Int): Task
+
+    @Query("DELETE FROM table_task")
+    suspend fun deleteAllTask()
 }

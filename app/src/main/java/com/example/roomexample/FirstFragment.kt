@@ -33,12 +33,14 @@ class FirstFragment : Fragment() {
 
         //Insertando algo a la lista
         val task = Task(1, "Algo de prueba", false)
-        val task01 = Task(2, "Algo de prueba 1", false)
-        val task02 = Task(3, "Algo de prueba 2", false)
+//        val task01 = Task(2, "Algo de prueba 1", false)
+//        val task02 = Task(3, "Algo de prueba 2", false)
         viewModel.insertTask(task)
-        viewModel.insertTask(task01)
-        viewModel.insertTask(task02)
+//        viewModel.insertTask(task01)
+//        viewModel.insertTask(task02)
 
+        //Delete Table
+        viewModel.deleteAllTask()
 
         //Escuchar liveData del ViewModel
         viewModel.allTask.observe(viewLifecycleOwner, Observer {

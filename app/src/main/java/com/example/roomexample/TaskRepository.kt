@@ -14,5 +14,10 @@ class TaskRepository(private val mTaskDao: TaskDao) {
         mTaskDao.insertOneTask(mTask)
     }
 
+    //Esta funcion elimina todo
+    suspend fun deleteAll(){
+        mTaskDao.deleteAllTask()
+    }
+
 
 }
